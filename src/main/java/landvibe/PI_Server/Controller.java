@@ -14,4 +14,11 @@ public class Controller {
     public String getCount() {
         return "현재 숫자는 " + num.get();
     }
+
+    @GetMapping("/decr")
+    public String decrCnt(){
+        num.decrementAndGet();
+        return "a 감소";
+    }
+
 }
