@@ -21,4 +21,9 @@ public class Controller {
         return "a 감소";
     }
 
+    @GetMapping("/incr")
+    public String incrCnt() {
+        num.getAndIncrement();
+        return "a 증가";
+    }
 }
