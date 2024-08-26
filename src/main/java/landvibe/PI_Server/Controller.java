@@ -15,6 +15,12 @@ public class Controller {
         return "현재 숫자는 " + num.get();
     }
 
+    @GetMapping("/decr")
+    public String decrCnt(){
+        num.decrementAndGet();
+        return "a 감소";
+    }
+
     @GetMapping("/incr")
     public String incrCnt() {
         num.getAndIncrement();
